@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy New Year ❤️</title>
 
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
     * {
         box-sizing: border-box;
@@ -22,7 +25,8 @@
 
     h1 {
         margin-top: 40px;
-        font-size: 2.5rem;
+        font-size: 2.6rem;
+        font-family: 'Playfair Display', serif;
         animation: fadeDown 1.5s ease;
     }
 
@@ -31,13 +35,14 @@
         width: 90%;
         font-size: 1.1rem;
         line-height: 1.7;
+        color: #ffffff;
         animation: fadeUp 2s ease;
     }
 
     button {
-        padding: 14px 28px;
+        padding: 14px 30px;
         font-size: 1rem;
-        background: #ff4b7d;
+        background: linear-gradient(45deg, #ff4b7d, #ff2f68);
         border: none;
         border-radius: 30px;
         color: white;
@@ -46,8 +51,8 @@
         animation: pulse 2s infinite;
     }
 
-    button:hover {
-        background: #ff2f68;
+    button:active {
+        transform: scale(0.96);
     }
 
     .menu {
@@ -58,25 +63,35 @@
     }
 
     .menu-item {
-        background: rgba(255,255,255,0.2);
-        margin-bottom: 12px;
-        border-radius: 15px;
+        background: rgba(255,255,255,0.18);
+        margin-bottom: 14px;
+        border-radius: 16px;
         overflow: hidden;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(6px);
     }
 
     .menu-title {
-        padding: 15px;
-        font-size: 1.1rem;
-        font-weight: bold;
+        padding: 16px;
+        font-size: 1.15rem;
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
         cursor: pointer;
+        background: linear-gradient(90deg, #ffdde1, #ee9ca7);
+        color: #7a0026;
+        transition: all 0.3s ease;
+    }
+
+    .menu-title:active {
+        background: linear-gradient(90deg, #ee9ca7, #ffdde1);
+        transform: scale(0.98);
     }
 
     .menu-content {
-        padding: 15px;
+        padding: 16px;
         display: none;
         font-size: 1rem;
-        background: rgba(255,255,255,0.15);
+        color: #ffffff;
+        background: rgba(255,255,255,0.12);
         animation: fadeUp 0.6s ease;
     }
 
@@ -127,35 +142,73 @@
 <div class="menu" id="menu">
 
     <div class="menu-item">
-        <div class="menu-title" onclick="toggleContent(0)">Your Eyes 👀</div>
+        <div class="menu-title" onclick="toggleContent(0)">✨ Your Eyes 👀</div>
         <div class="menu-content">
-            Write your romantic message about their eyes here.
+            Yk ayra today I got an mail for you 
+
+An image of mail that tell me to ban Ayra eyes as these are so damn addictive
+
+Ayra yk jb inko dekhta hu na, I always feel like how can something dark be so immensely beautiful that it attracts me to its depth.
+Yk those eyes attract me so so so so much always. 
+I always feel loved by just looking at your eyes. 
+Kya honge wo log jo sharab peete honge 
+Mai to aapki aankhei dekhte hi nashe mei doob jaata hai. 
+
+Ayra ek baar tumhari photo dekh raha tha mai, suddenly tumhari aankho par dhyaan gaya and mtlb subah se shaam hogyi mai bss stare hi krta raha, ruk hi nai paaya. 
+
+I always thank the gods for such beautiful eyes. 
+
         </div>
     </div>
 
     <div class="menu-item">
-        <div class="menu-title" onclick="toggleContent(1)">Your Hair 💫</div>
+        <div class="menu-title" onclick="toggleContent(1)">💫 Your Hair</div>
         <div class="menu-content">
-            Write something sweet about their hair here.
+            
+Yk na about Karwa chauth ka vrat, like mummy ko vrat todna tha chand ko dekhkr, main chhat mei upr khade hokr bss apne phone ka wallpaper khol diya and unhone wo dekhkr vrat tod liya. 
+But unko doubt hua ki ye to chand nahi hai hai ye Ayra hai, doubt bhi isliye aaya because itna beautiful to chaand bhi nahi hai. 
+
+The first time I saw you Ayru, I literally was about to faint.
+I mean ek to har chij about your face is so so so so perfect ki mai kya hi bolu. 
+
+Even guinness book of world records just made your face as a parameter for ultimate level of beauty. 
+
         </div>
     </div>
 
     <div class="menu-item">
-        <div class="menu-title" onclick="toggleContent(2)">Your Face 😍</div>
+        <div class="menu-title" onclick="toggleContent(2)">😍 Your Face</div>
         <div class="menu-content">
-            Write your thoughts about their beautiful face here.
+            Those long soft hairs, my hands just crave for a single touch of those curls. I wish to witnesss your beautiful hairs through my fingers. 
+First time you gave me your pic in which you were without hijaab and I saw you with your hairs, I just wasn't able to decide whether you or your hairs are more beautiful. 
+
+Probably it was the most black hair that whole of human history from the first human has seen. 
+
+Probably there aren't enough words to describe them. 
+
+I just got an mail from the world's biggest shampoo company that they wish to feature your hairs in an advertisement. 
+.
         </div>
     </div>
 
     <div class="menu-item">
-        <div class="menu-title" onclick="toggleContent(3)">You ❤️</div>
+        <div class="menu-title" onclick="toggleContent(3)">❤️ You</div>
         <div class="menu-content">
-            Write why they mean everything to you.
+            You are the best girl I have ever met in my life, one of the best and most amazing humans who loved me more than I love myself. 
+I would always be grateful that I have met you in my life my dear chummi. 
+
+I wish you a really really happy new year and many many amazing moments in the upcoming year 2026.
+
+Whatever you decide whether you want to be with me or not, you are the bestest chum. 
+
+Happy new year 2026 ❤
+
+
         </div>
     </div>
 
     <div class="menu-item">
-        <div class="menu-title" onclick="toggleContent(4)">Gift 🎁</div>
+        <div class="menu-title" onclick="toggleContent(4)">🎁 Gift</div>
         <div class="menu-content">
             Write your surprise gift message here.
         </div>
@@ -180,7 +233,6 @@
             contents[index].style.display === "block" ? "none" : "block";
     }
 
-    // Music play on first touch
     let musicPlayed = false;
     function playMusic() {
         if (!musicPlayed) {
@@ -189,7 +241,6 @@
         }
     }
 
-    // Floating hearts generator
     setInterval(() => {
         const heart = document.createElement("div");
         heart.className = "heart";
@@ -203,3 +254,4 @@
 
 </body>
 </html>
+
