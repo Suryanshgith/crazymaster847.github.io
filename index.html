@@ -247,6 +247,25 @@ Happy new year 2026 ❤
 <div class="menu-title" onclick="toggleContent(4);showLove()">🎁 Gift</div>
 <div class="menu-content">
 I have zepto coupon codes for you so that you can order chocolates but as of now you are in Kolkata so They may expire till mumbai so when you will come in Mumbai,I will text you about those ❤
+<div class="menu-item">
+    <div class="menu-title" onclick="toggleContent(4)">🎁 Gift</div>
+    <div class="menu-content">
+
+        <p>
+            This is something special, just for you.
+            When you feel ready, press play ❤️
+        </p>
+
+        <button onclick="playGiftAudio(event)">
+            ▶ Play my voice
+        </button>
+
+        <audio id="giftAudio">
+            <source src="gift-audio.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+</div>
 
 
 </div>
@@ -269,6 +288,13 @@ I have zepto coupon codes for you so that you can order chocolates but as of now
 </audio>
 
 <script>
+
+  function playGiftAudio(event) {
+    event.stopPropagation(); // prevents menu toggle
+    const audio = document.getElementById("giftAudio");
+    audio.play();
+}
+
 function toggleMenu(){
 const m=document.getElementById("menu");
 m.style.display=m.style.display==="block"?"none":"block"
