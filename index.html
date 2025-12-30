@@ -5,125 +5,161 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy New Year ❤️</title>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-    * {
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
+*{box-sizing:border-box;font-family:'Poppins',sans-serif}
 
-    body {
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-        text-align: center;
-        color: #fff;
-        overflow-x: hidden;
-    }
+body{
+margin:0;
+padding:0;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+text-align:center;
+color:#fff;
+overflow-x:hidden
+}
 
-    h1 {
-        margin-top: 40px;
-        font-size: 2.6rem;
-        font-family: 'Playfair Display', serif;
-        animation: fadeDown 1.5s ease;
-    }
+h1{
+margin-top:40px;
+font-size:2.6rem;
+font-family:'Playfair Display',serif;
+animation:fadeDown 1.5s ease
+}
 
-    .main-para {
-        margin: 20px auto;
-        width: 90%;
-        font-size: 1.1rem;
-        line-height: 1.7;
-        color: #ffffff;
-        animation: fadeUp 2s ease;
-    }
+.main-para{
+margin:20px auto;
+width:90%;
+font-size:1.1rem;
+line-height:1.7;
+animation:fadeUp 2s ease
+}
 
-    button {
-        padding: 14px 30px;
-        font-size: 1rem;
-        background: linear-gradient(45deg, #ff4b7d, #ff2f68);
-        border: none;
-        border-radius: 30px;
-        color: white;
-        cursor: pointer;
-        margin-top: 25px;
-        animation: pulse 2s infinite;
-    }
+button{
+padding:14px 30px;
+font-size:1rem;
+background:linear-gradient(45deg,#ff4b7d,#ff2f68);
+border:none;
+border-radius:30px;
+color:white;
+cursor:pointer;
+margin-top:25px;
+animation:pulse 2s infinite
+}
 
-    button:active {
-        transform: scale(0.96);
-    }
+.menu{
+width:92%;
+margin:30px auto;
+display:none;
+animation:fadeUp 1s ease
+}
 
-    .menu {
-        width: 92%;
-        margin: 30px auto;
-        display: none;
-        animation: fadeUp 1s ease;
-    }
+.menu-item{
+background:rgba(255,255,255,0.18);
+margin-bottom:14px;
+border-radius:16px;
+overflow:hidden;
+backdrop-filter:blur(6px)
+}
 
-    .menu-item {
-        background: rgba(255,255,255,0.18);
-        margin-bottom: 14px;
-        border-radius: 16px;
-        overflow: hidden;
-        backdrop-filter: blur(6px);
-    }
+.menu-title{
+padding:16px;
+font-size:1.15rem;
+font-family:'Playfair Display',serif;
+font-weight:700;
+cursor:pointer;
+background:linear-gradient(90deg,#ffdde1,#ee9ca7);
+color:#7a0026
+}
 
-    .menu-title {
-        padding: 16px;
-        font-size: 1.15rem;
-        font-family: 'Playfair Display', serif;
-        font-weight: 700;
-        cursor: pointer;
-        background: linear-gradient(90deg, #ffdde1, #ee9ca7);
-        color: #7a0026;
-        transition: all 0.3s ease;
-    }
+.menu-content{
+padding:16px;
+display:none;
+font-size:1rem;
+background:rgba(255,255,255,0.12);
+animation:fadeUp .6s ease
+}
 
-    .menu-title:active {
-        background: linear-gradient(90deg, #ee9ca7, #ffdde1);
-        transform: scale(0.98);
-    }
+/* images */
+.section-image{
+width:100%;
+max-width:280px;
+margin:12px auto;
+border-radius:14px;
+display:block;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+cursor:pointer
+}
 
-    .menu-content {
-        padding: 16px;
-        display: none;
-        font-size: 1rem;
-        color: #ffffff;
-        background: rgba(255,255,255,0.12);
-        animation: fadeUp 0.6s ease;
-    }
+/* image zoom overlay */
+#imgOverlay{
+position:fixed;
+top:0;left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.85);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:9999
+}
 
-    /* Floating hearts */
-    .heart {
-        position: fixed;
-        bottom: -20px;
-        font-size: 20px;
-        animation: floatUp 6s linear infinite;
-        opacity: 0.7;
-    }
+#imgOverlay img{
+max-width:90%;
+max-height:90%;
+border-radius:16px;
+animation:fadeUp .4s ease
+}
 
-    @keyframes floatUp {
-        0% { transform: translateY(0); opacity: 1; }
-        100% { transform: translateY(-100vh); opacity: 0; }
-    }
+/* final love screen */
+#loveScreen{
+position:fixed;
+top:0;left:0;
+width:100%;
+height:100%;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+display:none;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+z-index:9998;
+animation:fadeUp 1s ease
+}
 
-    @keyframes fadeDown {
-        from { opacity: 0; transform: translateY(-30px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+#loveScreen h2{
+font-family:'Playfair Display',serif;
+font-size:3rem;
+animation:pulse 2s infinite
+}
 
-    @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+/* hearts */
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:20px;
+animation:floatUp 6s linear infinite;
+opacity:.7
+}
 
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-        100% { transform: scale(1); }
-    }
+@keyframes floatUp{
+0%{transform:translateY(0);opacity:1}
+100%{transform:translateY(-100vh);opacity:0}
+}
+
+@keyframes fadeDown{
+from{opacity:0;transform:translateY(-30px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.05)}
+100%{transform:scale(1)}
+}
 </style>
 </head>
 
@@ -132,124 +168,116 @@
 <h1>🎉 Happy New Year My Love ❤️</h1>
 
 <p class="main-para">
-    A new year begins, but my favorite thing remains the same — you.
-    Every smile, every moment, every heartbeat feels more special with you.
-    May this year bring us closer, stronger, and happier than ever.
+A new year begins, but my favorite thing remains the same — you.
 </p>
 
 <button onclick="toggleMenu()">Click me for more 💖</button>
 
 <div class="menu" id="menu">
 
-    <div class="menu-item">
-        <div class="menu-title" onclick="toggleContent(0)">✨ Your Eyes 👀</div>
-        <div class="menu-content">
-            Yk ayra today I got an mail for you 
+<div class="menu-item">
+<div class="menu-title" onclick="toggleContent(0)">✨ Your Eyes 👀</div>
+<div class="menu-content">
+<img src="Eyes.png" class="section-image" onclick="zoomImg(this)">
+Your beautiful eyes text...
+</div>
+</div>
 
-An image of mail that tell me to ban Ayra eyes as these are so damn addictive
+<div class="menu-item">
+<div class="menu-title" onclick="toggleContent(1)">💫 Your Hair</div>
+<div class="menu-content">
+<img src="Hair.png" class="section-image" onclick="zoomImg(this)">
+Your hair text...
+</div>
+</div>
 
-Ayra yk jb inko dekhta hu na, I always feel like how can something dark be so immensely beautiful that it attracts me to its depth.
-Yk those eyes attract me so so so so much always. 
-I always feel loved by just looking at your eyes. 
-Kya honge wo log jo sharab peete honge 
-Mai to aapki aankhei dekhte hi nashe mei doob jaata hai. 
+<div class="menu-item">
+<div class="menu-title" onclick="toggleContent(2)">😍 Your Face</div>
+<div class="menu-content">
+<img src="Beauty.png" class="section-image" onclick="zoomImg(this)">
+Your face text...
+</div>
+</div>
 
-Ayra ek baar tumhari photo dekh raha tha mai, suddenly tumhari aankho par dhyaan gaya and mtlb subah se shaam hogyi mai bss stare hi krta raha, ruk hi nai paaya. 
+<div class="menu-item">
+<div class="menu-title" onclick="toggleContent(3)">❤️ You</div>
+<div class="menu-content">
+You are everything to me...
+</div>
+</div>
 
-I always thank the gods for such beautiful eyes. 
-
-        </div>
-    </div>
-
-    <div class="menu-item">
-        <div class="menu-title" onclick="toggleContent(1)">💫 Your Hair</div>
-        <div class="menu-content">
-            
-Yk na about Karwa chauth ka vrat, like mummy ko vrat todna tha chand ko dekhkr, main chhat mei upr khade hokr bss apne phone ka wallpaper khol diya and unhone wo dekhkr vrat tod liya. 
-But unko doubt hua ki ye to chand nahi hai hai ye Ayra hai, doubt bhi isliye aaya because itna beautiful to chaand bhi nahi hai. 
-
-The first time I saw you Ayru, I literally was about to faint.
-I mean ek to har chij about your face is so so so so perfect ki mai kya hi bolu. 
-
-Even guinness book of world records just made your face as a parameter for ultimate level of beauty. 
-
-        </div>
-    </div>
-
-    <div class="menu-item">
-        <div class="menu-title" onclick="toggleContent(2)">😍 Your Face</div>
-        <div class="menu-content">
-            Those long soft hairs, my hands just crave for a single touch of those curls. I wish to witnesss your beautiful hairs through my fingers. 
-First time you gave me your pic in which you were without hijaab and I saw you with your hairs, I just wasn't able to decide whether you or your hairs are more beautiful. 
-
-Probably it was the most black hair that whole of human history from the first human has seen. 
-
-Probably there aren't enough words to describe them. 
-
-I just got an mail from the world's biggest shampoo company that they wish to feature your hairs in an advertisement. 
-.
-        </div>
-    </div>
-
-    <div class="menu-item">
-        <div class="menu-title" onclick="toggleContent(3)">❤️ You</div>
-        <div class="menu-content">
-            You are the best girl I have ever met in my life, one of the best and most amazing humans who loved me more than I love myself. 
-I would always be grateful that I have met you in my life my dear chummi. 
-
-I wish you a really really happy new year and many many amazing moments in the upcoming year 2026.
-
-Whatever you decide whether you want to be with me or not, you are the bestest chum. 
-
-Happy new year 2026 ❤
-
-
-        </div>
-    </div>
-
-    <div class="menu-item">
-        <div class="menu-title" onclick="toggleContent(4)">🎁 Gift</div>
-        <div class="menu-content">
-            Write your surprise gift message here.
-        </div>
-    </div>
+<div class="menu-item">
+<div class="menu-title" onclick="toggleContent(4);showLove()">🎁 Gift</div>
+<div class="menu-content">
+This is my heart for you ❤️
+</div>
+</div>
 
 </div>
 
-<!-- Background Music -->
+<!-- image zoom -->
+<div id="imgOverlay" onclick="closeZoom()">
+<img id="zoomedImg">
+</div>
+
+<!-- final love screen -->
+<div id="loveScreen">
+<h2>I Love You ❤️</h2>
+</div>
+
 <audio id="bgMusic" loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+<source src="teri-aankhon-mein.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-    function toggleMenu() {
-        const menu = document.getElementById("menu");
-        menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
+function toggleMenu(){
+const m=document.getElementById("menu");
+m.style.display=m.style.display==="block"?"none":"block"
+}
 
-    function toggleContent(index) {
-        const contents = document.getElementsByClassName("menu-content");
-        contents[index].style.display =
-            contents[index].style.display === "block" ? "none" : "block";
-    }
+function toggleContent(i){
+const c=document.getElementsByClassName("menu-content");
+c[i].style.display=c[i].style.display==="block"?"none":"block"
+}
 
-    let musicPlayed = false;
-    function playMusic() {
-        if (!musicPlayed) {
-            document.getElementById("bgMusic").play();
-            musicPlayed = true;
-        }
-    }
+let musicPlayed=false;
+function playMusic(){
+if(!musicPlayed){
+document.getElementById("bgMusic").play();
+musicPlayed=true
+}
+}
 
-    setInterval(() => {
-        const heart = document.createElement("div");
-        heart.className = "heart";
-        heart.innerHTML = "❤️";
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
-        document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 6000);
-    }, 500);
+/* image zoom */
+function zoomImg(img){
+document.getElementById("zoomedImg").src=img.src;
+document.getElementById("imgOverlay").style.display="flex"
+}
+function closeZoom(){
+document.getElementById("imgOverlay").style.display="none"
+}
+
+/* love screen */
+let loveShown=false;
+function showLove(){
+if(!loveShown){
+loveShown=true;
+const l=document.getElementById("loveScreen");
+l.style.display="flex";
+setTimeout(()=>{l.style.display="none"},4000)
+}
+}
+
+/* hearts */
+setInterval(()=>{
+const h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(Math.random()*3+4)+"s";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000)
+},500);
 </script>
 
 </body>
